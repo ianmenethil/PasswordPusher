@@ -15,7 +15,7 @@ services:
   - type: web
     name: pwpush-web
     runtime: ruby
-    plan: starter
+    plan: free
     region: oregon
     buildCommand: bundle install && bundle exec rails assets:precompile
     preDeployCommand: bundle exec rails db:prepare
