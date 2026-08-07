@@ -17,8 +17,7 @@ services:
     runtime: ruby
     plan: free
     region: oregon
-    buildCommand: bundle install && bundle exec rails assets:precompile
-    preDeployCommand: bundle exec rails db:prepare
+    buildCommand: bundle install && bundle exec rails db:prepare && bundle exec rails assets:precompile
     startCommand: bundle exec bin/thrust bin/rails server
     healthCheckPath: /up
     envVars:
