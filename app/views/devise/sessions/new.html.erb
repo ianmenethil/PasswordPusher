@@ -22,3 +22,8 @@
 
   <button class="w-100 btn btn-lg btn-primary mt-3" type="submit"><%= I18n.t('devise.general.login') %></button>
 <% end %>
+
+<% if Devise.omniauth_configs.key?(:openid_connect) %>
+  <%= button_to "Sign in with Zenith SSO", user_openid_connect_omniauth_authorize_path,
+      class: "w-100 btn btn-lg btn-outline-primary mt-2", data: { turbo: false } %>
+<% end %>

@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # :timeoutable and :omniauthable
   # Email-based modules (:confirmable, :lockable, :recoverable) are added when
   # Settings.enable_user_account_emails is true (requires SMTP in config/settings.yml).
-  devise_modules = [:database_authenticatable, :registerable, :rememberable, :validatable, :trackable, :timeoutable]
+  devise_modules = [:database_authenticatable, :registerable, :rememberable, :validatable, :trackable, :timeoutable, :omniauthable]
   devise_modules += [:confirmable, :lockable, :recoverable] if Settings.enable_user_account_emails
   devise(*devise_modules)
 

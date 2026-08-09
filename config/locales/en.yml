@@ -6,4 +6,4 @@ en:
         user:
           attributes:
             email:
-              invalid: "Sign up is only available to Zenith Employees"
+              invalid: Sign up is only available to Zenith Employees

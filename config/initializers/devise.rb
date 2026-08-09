@@ -278,6 +278,26 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
+  # Zenith SSO (OIDC via auth.zenithpayments.support). Guarded, not ENV.fetch: this
+  # initializer runs on every boot, including Render's buildCommand (rails assets:precompile).
+  # ENV.fetch raises on a missing key and would fail the build/boot outright; this must
+  # degrade to "SSO not configured" instead. name: must be :openid_connect (not a custom
+  # name) or Devise routes to the wrong path per omniauth_openid_connect's own README.
+  if ENV["ZENITH_SSO_CLIENT_ID"].present? && ENV["ZENITH_SSO_CLIENT_SECRET"].present?
+    config.omniauth :openid_connect,
+      name: :openid_connect,
+      scope: [:openid, :email, :profile],
+      response_type: :code,
+      issuer: "https://auth.zenithpayments.support",
+      discovery: true,
+      pkce: true,
+      client_options: {
+        identifier: ENV["ZENITH_SSO_CLIENT_ID"],
+        secret: ENV["ZENITH_SSO_CLIENT_SECRET"],
+        redirect_uri: "https://share.zenithpayments.support/users/auth/openid_connect/callback"
+      }
+  end
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

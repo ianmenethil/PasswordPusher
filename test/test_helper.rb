@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 ENV["RAILS_ENV"] = "test"
+
+# Registers the guarded Zenith SSO OmniAuth provider (config/initializers/devise.rb) so its
+# routes/config exist for tests. Placeholder values only - no real Auth-Server calls are made
+# in tests, which use OmniAuth.config.test_mode with mocked auth hashes.
+ENV["ZENITH_SSO_CLIENT_ID"] ||= "test_placeholder_client_id"
+ENV["ZENITH_SSO_CLIENT_SECRET"] ||= "test_placeholder_client_secret"
+
 require File.expand_path("../config/environment", __dir__)
 require "rails/test_help"
 require "minitest/rails"
