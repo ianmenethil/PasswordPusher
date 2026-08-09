@@ -55,6 +55,10 @@ services:
         value: "false"
       - key: PWP__SIGNUP_EMAIL_REGEXP
         value: '\A[^@\s]+@(zenithpayments\.com\.au|zenithpayments\.support)\z'
+      - key: ZENITH_SSO_CLIENT_ID
+        value: kmeBwqftDHXjAbGnrIOvnnRwuhpLXCGr
+      - key: ZENITH_SSO_CLIENT_SECRET
+        sync: false
     # Uncomment for Solid Queue worker (separate dyno):
     # - type: worker
     #   name: pwpush-worker
