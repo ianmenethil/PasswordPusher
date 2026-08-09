@@ -51,6 +51,10 @@ services:
         value: "true"
       - key: PWP__ENABLE_USER_ACCOUNT_EMAILS
         value: "false"
+      - key: PWP__URL__RETRIEVAL_STEP_DEFAULT
+        value: "false"
+      - key: PWP__SIGNUP_EMAIL_REGEXP
+        value: '\A[^@\s]+@(zenithpayments\.com\.au|zenithpayments\.support)\z'
     # Uncomment for Solid Queue worker (separate dyno):
     # - type: worker
     #   name: pwpush-worker
