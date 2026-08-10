@@ -38,9 +38,11 @@ services:
       - key: PWP__ALLOW_ANONYMOUS
         value: "false"
       - key: PWP__DISABLE_SIGNUPS
-        value: "false"
+        value: "true"
       - key: PWP__DISABLE_LOGINS
         value: "false"
+      - key: PWP__ZENITH_SSO_ONLY
+        value: "true"
       - key: PWP__REQUIRE_MFA
         value: "false"
       - key: PWP__ENABLE_FILE_PUSHES

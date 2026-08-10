@@ -10,6 +10,7 @@ class Users::SessionsController < Devise::SessionsController
   # Register reject last so it runs first (prepended callbacks run in reverse order).
   prepend_before_action :authenticate_with_two_factor, only: [:create]
   prepend_before_action :reject_when_logins_disabled, only: [:new, :create]
+  prepend_before_action :reject_password_login_when_sso_only, only: [:create]
 
   # before_action :configure_sign_in_params, only: [:create]
 
@@ -81,6 +82,12 @@ class Users::SessionsController < Devise::SessionsController
   #
   def reject_when_logins_disabled
     return unless Settings.disable_logins
+
+    head :not_found
+  end
+
+  def reject_password_login_when_sso_only
+    return unless Settings.zenith_sso_only
 
     head :not_found
   end

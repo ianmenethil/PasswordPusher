@@ -209,6 +209,20 @@ disable_signups: false
 #
 disable_logins: false
 
+## Zenith SSO Only (fork-specific)
+#
+# When true, blocks native password sign-in (POST /users/sign_in) while
+# keeping the sign-in page itself reachable, so an SSO button on that page
+# stays usable. Use this instead of disable_logins when Zenith SSO is
+# configured: disable_logins also 404s the page GET, which would take the
+# SSO button down with it (see UPGRADE-2.0.md's "fully anonymous" combo,
+# which assumes no SSO exists).
+#
+# Environment variable override:
+# PWP__ZENITH_SSO_ONLY='true'
+#
+zenith_sso_only: false
+
 ## Require Multi-Factor Authentication
 #
 # When true, all users must have two-factor authentication (TOTP) enabled.
