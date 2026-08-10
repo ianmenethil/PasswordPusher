@@ -674,3 +674,4 @@ bin/*.rb
 .cursor
 
 
+.claude/.git-clean-warned
