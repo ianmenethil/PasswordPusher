@@ -288,13 +288,13 @@ Devise.setup do |config|
       name: :openid_connect,
       scope: [:openid, :email, :profile],
       response_type: :code,
-      issuer: "https://auth.zenithpayments.support",
+      issuer: ENV.fetch("ZENITH_SSO_ISSUER", "https://auth.zenithpayments.support"),
       discovery: true,
       pkce: true,
       client_options: {
         identifier: ENV["ZENITH_SSO_CLIENT_ID"],
         secret: ENV["ZENITH_SSO_CLIENT_SECRET"],
-        redirect_uri: "https://share.zenithpayments.support/users/auth/openid_connect/callback"
+        redirect_uri: ENV.fetch("ZENITH_SSO_REDIRECT_URI", "https://share.zenithpayments.support/users/auth/openid_connect/callback")
       }
   end
 
