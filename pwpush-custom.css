@@ -9,6 +9,7 @@
   --zp-red-hover: #B91B21;
   --zp-red-press: #A0171C;
   --zp-ink: #1C1C1C;
+  --zp-ink-solid: #1C1C1C;
   --zp-n-200: #E7E7E7;
   --zp-n-300: #D1D1D1;
 }
@@ -44,13 +45,20 @@ h1, h2, h3 {
   box-shadow: 0 0 0 0.25rem rgba(215, 31, 38, 0.2);
 }
 
-/* Generate password button — ink, not a gradient (brand: red is accent-only) */
+/* Generate password button — ink, not a gradient (brand: red is accent-only).
+   Uses --zp-ink-solid (fixed, not the theme-flipping --zp-ink) so the white
+   text stays readable in both light and dark mode. */
 #generate_password {
-  background-color: var(--zp-ink);
+  background-color: var(--zp-ink-solid);
   border: none;
   border-radius: 9999px;
   font-weight: 600;
   color: #fff;
+}
+
+/* "7 Days" / "5 Views" expiry badges — brand red instead of default Bootstrap blue */
+.badge.bg-primary {
+  background-color: var(--zp-red) !important;
 }
 
 /* Slider */
@@ -64,23 +72,48 @@ h1, h2, h3 {
   height: 8px;
 }
 
-/* Push It / primary submit — brand red, full pill per shape rules */
-button[type="submit"].btn-lg,
-.btn-primary {
+/* Push It / primary submit — brand red, full pill per shape rules.
+   The app's own dark-theme CSS ships html[data-bs-theme="dark"] .btn-primary
+   (specificity 0,2,0), which beats a plain .btn-primary rule regardless of
+   load order — so the dark-mode case needs its own equally-specific selector. */
+button[type="submit"].btn-lg:not(.btn-outline-primary),
+.btn-primary,
+html[data-bs-theme="dark"] .btn-primary {
   background-color: var(--zp-red);
   border-color: var(--zp-red);
   border-radius: 9999px;
   font-weight: 600;
 }
-button[type="submit"].btn-lg:hover,
-.btn-primary:hover {
+button[type="submit"].btn-lg:not(.btn-outline-primary):hover,
+.btn-primary:hover,
+html[data-bs-theme="dark"] .btn-primary:hover {
   background-color: var(--zp-red-hover);
   border-color: var(--zp-red-hover);
 }
-button[type="submit"].btn-lg:active,
-.btn-primary:active {
+button[type="submit"].btn-lg:not(.btn-outline-primary):active,
+.btn-primary:active,
+html[data-bs-theme="dark"] .btn-primary:active {
   background-color: var(--zp-red-press);
   border-color: var(--zp-red-press);
+}
+
+/* Outline buttons (e.g. "Sign in with Zenith SSO") — red outline, fills red on hover */
+.btn-outline-primary {
+  color: var(--zp-red);
+  border-color: var(--zp-red);
+  background-color: transparent;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #fff;
+  background-color: var(--zp-red);
+  border-color: var(--zp-red);
+}
+.btn-outline-primary:active {
+  background-color: var(--zp-red-press) !important;
+  border-color: var(--zp-red-press) !important;
 }
 
 /* Card-style form sections — 12px radius per brand shape rules */

@@ -61,6 +61,10 @@ services:
         value: kmeBwqftDHXjAbGnrIOvnnRwuhpLXCGr
       - key: ZENITH_SSO_CLIENT_SECRET
         sync: false
+      - key: PWP__BRAND__LIGHT_LOGO
+        value: /logos/zenith-logo-light-bg.png
+      - key: PWP__BRAND__DARK_LOGO
+        value: /logos/zenith-logo-dark-bg.png
     # Uncomment for Solid Queue worker (separate dyno):
     # - type: worker
     #   name: pwpush-worker
