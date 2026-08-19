@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2026-07-19 14:16+0200\n"
-"PO-Revision-Date: 2026-07-19 12:16+0000\n"
+"POT-Creation-Date: 2026-08-13 23:55+0000\n"
+"PO-Revision-Date: 2026-08-13 23:55+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -151,19 +151,19 @@ msgid "File pushes are unavailable while logins are disabled."
 msgstr "Push file tidak tersedia saat login dinonaktifkan."
 
 #: ../../../app/controllers/pushes_controller.rb:536
-#: ../../../app/models/push.rb:210
+#: ../../../app/models/push.rb:223
 msgid "File pushes are disabled."
 msgstr "Dorongan file dinonaktifkan."
 
 #: ../../../app/controllers/pushes_controller.rb:541
-#: ../../../app/models/push.rb:214
+#: ../../../app/models/push.rb:227
 #: ../../../test/controllers/urls_controller_test.rb:110
 #: ../../../test/controllers/urls_controller_test.rb:127
 msgid "URL pushes are disabled."
 msgstr "Dorongan URL dinonaktifkan."
 
 #: ../../../app/controllers/pushes_controller.rb:553
-#: ../../../app/models/push.rb:218
+#: ../../../app/models/push.rb:231
 #: ../../../test/controllers/qr_push_controller_test.rb:128
 #: ../../../test/controllers/qr_push_controller_test.rb:144
 msgid "QR code pushes are disabled."
@@ -220,8 +220,8 @@ msgstr[0] "hari"
 msgstr[1] ""
 
 #: ../../../app/helpers/share_message_helper.rb:14
-msgid "Once retrieved, the link and content will be deleted upon expiration."
-msgstr "Setelah diambil, tautan dan konten akan dihapus setelah kedaluwarsa."
+msgid "The link and content will be deleted upon expiration."
+msgstr "Tautan dan konten akan dihapus setelah kedaluwarsa."
 
 #: ../../../app/helpers/share_message_helper.rb:18
 msgid "A secure link has been shared with you."
@@ -354,11 +354,11 @@ msgstr ""
 "Muatan kode QR terlalu besar.  Anda hanya dapat mendorong hingga %{count} byte"
 "."
 
-#: ../../../app/models/push.rb:243
+#: ../../../app/models/push.rb:256
 msgid "are not available for expired pushes"
 msgstr "tidak tersedia untuk push yang sudah kedaluwarsa"
 
-#: ../../../app/models/push.rb:244
+#: ../../../app/models/push.rb:257
 msgid "is not available for expired pushes"
 msgstr "tidak tersedia untuk push yang sudah kedaluwarsa"
 
@@ -384,40 +384,36 @@ msgstr "Pendorong Kata Sandi"
 
 #: ../../../app/views/admin/_navigation.html.erb:12
 #: ../../../app/views/admin/index.html.erb:11
-#: ../../../app/views/shared/_header.html.erb:40
+#: ../../../app/views/shared/_header.html.erb:32
 msgid "Administration Center"
 msgstr "Administrasi"
 
-#: ../../../app/views/admin/_navigation.html.erb:17
-msgid "BETA"
-msgstr "BETA"
-
-#: ../../../app/views/admin/_navigation.html.erb:31
+#: ../../../app/views/admin/_navigation.html.erb:26
 msgid "Administration Home"
 msgstr "Beranda Administrasi"
 
-#: ../../../app/views/admin/_navigation.html.erb:37
+#: ../../../app/views/admin/_navigation.html.erb:32
 #: ../../../app/views/admin/index.html.erb:121
 msgid "System Administration"
 msgstr "Administrasi Sistem"
 
-#: ../../../app/views/admin/_navigation.html.erb:43
+#: ../../../app/views/admin/_navigation.html.erb:38
 msgid "Admin Users"
 msgstr "Pengguna Admin"
 
-#: ../../../app/views/admin/_navigation.html.erb:50
+#: ../../../app/views/admin/_navigation.html.erb:45
 #: ../../../app/views/admin/index.html.erb:161
 #: ../../../app/views/madmin/dashboard/show.html.erb:1
 msgid "Data Explorer"
 msgstr "Penjelajah Data"
 
-#: ../../../app/views/admin/_navigation.html.erb:57
+#: ../../../app/views/admin/_navigation.html.erb:52
 #: ../../../app/views/admin/index.html.erb:146
 #: ../../../app/views/layouts/mission_control/jobs/_application_selection.html.erb:34
 msgid "Background Jobs"
 msgstr "Pekerjaan Latar Belakang"
 
-#: ../../../app/views/admin/_navigation.html.erb:64
+#: ../../../app/views/admin/_navigation.html.erb:59
 #: ../../../app/views/admin/custom_css/edit.html.erb:1
 #: ../../../app/views/admin/custom_css/edit.html.erb:6
 msgid "Custom CSS"
@@ -636,7 +632,7 @@ msgstr "Melihat log perubahan dan mengunduh pembaruan"
 
 #: ../../../app/views/admin/index.html.erb:262
 #: ../../../app/views/pages/about.html.erb:102
-#: ../../../app/views/shared/_footer.html.erb:29
+#: ../../../app/views/shared/_footer.html.erb:19
 #: ../../../app/views/users/first_runs/new.html.erb:190
 msgid "Documentation"
 msgstr "Dokumentasi"
@@ -1117,7 +1113,7 @@ msgstr "Mengatur autentikasi dua faktor"
 
 #: ../../../app/views/devise/registrations/token.html.erb:1
 #: ../../../app/views/devise/registrations/token.html.erb:6
-#: ../../../app/views/shared/_header.html.erb:54
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "API Token"
 msgstr "Token API"
 
@@ -1219,14 +1215,22 @@ msgstr "Sistem Aktif"
 msgid "Back to App"
 msgstr "Kembali ke Aplikasi"
 
-#: ../../../app/views/layouts/login.html.erb:34
-#: ../../../app/views/shared/_footer.html.erb:10
-#: ../../../app/views/shared/_footer.html.erb:14
-#: ../../../app/views/shared/_header.html.erb:9
-#: ../../../app/views/shared/_header.html.erb:13
-#: ../../../app/views/users/first_runs/new.html.erb:11
-msgid "Password Pusher Logo"
-msgstr "Logo Pendorong Kata Sandi"
+#: ../../../app/views/layouts/application.html.erb:6
+#: ../../../app/views/layouts/login.html.erb:6
+msgid "Use light theme"
+msgstr "Gunakan tema terang"
+
+#: ../../../app/views/layouts/application.html.erb:7
+#: ../../../app/views/layouts/login.html.erb:7
+msgid "Use dark theme"
+msgstr "Gunakan tema gelap"
+
+#: ../../../app/views/layouts/application.html.erb:8
+#: ../../../app/views/layouts/login.html.erb:8
+#: ../../../app/views/shared/_theme_toggle.html.erb:9
+#: ../../../app/views/shared/_theme_toggle.html.erb:10
+msgid "Use system theme"
+msgstr "Gunakan tema sistem"
 
 #: ../../../app/views/layouts/madmin/application.html.erb:13
 msgid "Data Explorer - Administration - Password Pusher"
@@ -2603,6 +2607,12 @@ msgstr ""
 "Setelah kedaluwarsa, tautan rahasia ini dan semua konten akan dihapus secara p"
 "ermanen."
 
+#: ../../../app/views/pushes/_error.html.erb:3
+msgid "%{count} error prohibited this push from being saved:"
+msgid_plural "%{count} errors prohibited this push from being saved:"
+msgstr[0] "Kesalahan %{count} menyebabkan push ini tidak dapat disimpan:"
+msgstr[1] ""
+
 #: ../../../app/views/pushes/_files_form.html.erb:1
 msgid "Securely Send Files"
 msgstr "Mengirim File dengan Aman"
@@ -3127,7 +3137,7 @@ msgstr "Dorongan Pengeditan"
 
 #: ../../../app/views/pushes/index.html.erb:1
 #: ../../../app/views/shared/_dashboard_header.html.erb:5
-#: ../../../app/views/shared/_header.html.erb:27
+#: ../../../app/views/shared/_header.html.erb:19
 msgid "Dashboard"
 msgstr "Dasbor"
 
@@ -3428,6 +3438,11 @@ msgstr "Opsi Tambahan"
 msgid "Show / Hide"
 msgstr "Tampilkan / Sembunyikan"
 
+#: ../../../app/views/shared/_brand_logo.html.erb:22
+#: ../../../app/views/users/first_runs/new.html.erb:11
+msgid "Password Pusher Logo"
+msgstr "Logo Pendorong Kata Sandi"
+
 #: ../../../app/views/shared/_cookie_consent.html.erb:6
 msgid ""
 "Browser cookies help make this tool work. By using it, you agree the use of th"
@@ -3454,31 +3469,31 @@ msgstr ""
 " dibuat oleh pengguna ini secara permanen. Tindakan ini tidak dapat dibatalkan"
 ". Apakah Anda yakin ingin melanjutkan?"
 
-#: ../../../app/views/shared/_footer.html.erb:27
+#: ../../../app/views/shared/_footer.html.erb:17
 msgid "About"
 msgstr "Tentang"
 
-#: ../../../app/views/shared/_footer.html.erb:28
+#: ../../../app/views/shared/_footer.html.erb:18
 msgid "API"
 msgstr "API"
 
-#: ../../../app/views/shared/_header.html.erb:33
+#: ../../../app/views/shared/_header.html.erb:25
 msgid "Account"
 msgstr "Akun"
 
-#: ../../../app/views/shared/_header.html.erb:48
+#: ../../../app/views/shared/_header.html.erb:40
 msgid "Edit Login Details"
 msgstr "Mengedit Detail Login"
 
-#: ../../../app/views/shared/_header.html.erb:61
+#: ../../../app/views/shared/_header.html.erb:53
 msgid "Log Out"
 msgstr "Log Out"
 
-#: ../../../app/views/shared/_header.html.erb:68
+#: ../../../app/views/shared/_header.html.erb:60
 msgid "Log In"
 msgstr "Masuk"
 
-#: ../../../app/views/shared/_header.html.erb:71
+#: ../../../app/views/shared/_header.html.erb:63
 msgid "Sign Up"
 msgstr "Daftar"
 

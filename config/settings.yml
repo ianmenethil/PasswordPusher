@@ -879,6 +879,10 @@ brand:
   #
   # ..for both a light and dark theme
   #
+  # If only one of light_logo / dark_logo is set, that custom file is used for
+  # both theme modes. Stock Password Pusher assets are used only when neither
+  # custom logo is configured.
+  #
   # You can also replace these relative paths with fully qualified HTTP links to
   # external resources such as Amazon S3 etc.
   # e.g. PWP__BRAND__DARK_LOGO='https://mys3bucket.amazonaws.com/a/some-image.png'
@@ -981,6 +985,23 @@ noindex: true
 #   2. Shipped Bootswatch themes are pre-built into the container image. PWP__THEME only selects which CSS bundle to serve; no extra compile at boot for standard themes.
 #
 theme: 'default'
+
+### Theme Mode (Light / Dark)
+#
+# Controls whether the application follows the visitor's OS preference or
+# forces light/dark for the entire instance.
+#
+# Values:
+#   auto  - Follow OS preference; visitors can override with the header toggle
+#   light - Force light mode for all visitors (hides the toggle)
+#   dark  - Force dark mode for all visitors (hides the toggle)
+#
+# Environment Variable Override: PWP__THEME_MODE='auto'
+#
+# This is separate from PWP__THEME (Bootswatch skin). theme_mode only controls
+# the light/dark axis via Bootstrap's data-bs-theme attribute.
+#
+theme_mode: 'auto'
 
 ### Pre-compilation (DEPRECATED)
 #

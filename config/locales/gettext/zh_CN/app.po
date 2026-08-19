@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2026-07-19 14:16+0200\n"
-"PO-Revision-Date: 2026-07-19 12:16+0000\n"
+"POT-Creation-Date: 2026-08-13 23:55+0000\n"
+"PO-Revision-Date: 2026-08-13 23:55+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese\n"
 "Language: zh_CN\n"
@@ -145,19 +145,19 @@ msgid "File pushes are unavailable while logins are disabled."
 msgstr "登录功能禁用期间，文件推送功能不可用。"
 
 #: ../../../app/controllers/pushes_controller.rb:536
-#: ../../../app/models/push.rb:210
+#: ../../../app/models/push.rb:223
 msgid "File pushes are disabled."
 msgstr "文件推送已禁用。"
 
 #: ../../../app/controllers/pushes_controller.rb:541
-#: ../../../app/models/push.rb:214
+#: ../../../app/models/push.rb:227
 #: ../../../test/controllers/urls_controller_test.rb:110
 #: ../../../test/controllers/urls_controller_test.rb:127
 msgid "URL pushes are disabled."
 msgstr "URL 推送已禁用。"
 
 #: ../../../app/controllers/pushes_controller.rb:553
-#: ../../../app/models/push.rb:218
+#: ../../../app/models/push.rb:231
 #: ../../../test/controllers/qr_push_controller_test.rb:128
 #: ../../../test/controllers/qr_push_controller_test.rb:144
 msgid "QR code pushes are disabled."
@@ -210,8 +210,8 @@ msgstr[0] "天"
 msgstr[1] ""
 
 #: ../../../app/helpers/share_message_helper.rb:14
-msgid "Once retrieved, the link and content will be deleted upon expiration."
-msgstr "一旦检索，链接和内容将在到期时被删除。"
+msgid "The link and content will be deleted upon expiration."
+msgstr "过期后，链接和内容将被删除。"
 
 #: ../../../app/helpers/share_message_helper.rb:18
 msgid "A secure link has been shared with you."
@@ -334,11 +334,11 @@ msgstr "必须是有效的 HTTP 或 HTTPS URL。"
 msgid "The QR code payload is too large.  You can only push up to %{count} bytes."
 msgstr "QR 码负载过大。您最多只能推送 %{count} 个字节。"
 
-#: ../../../app/models/push.rb:243
+#: ../../../app/models/push.rb:256
 msgid "are not available for expired pushes"
 msgstr "已过期推送功能不可用。"
 
-#: ../../../app/models/push.rb:244
+#: ../../../app/models/push.rb:257
 msgid "is not available for expired pushes"
 msgstr "不适用于已过期的推送。"
 
@@ -364,40 +364,36 @@ msgstr "密码推送器"
 
 #: ../../../app/views/admin/_navigation.html.erb:12
 #: ../../../app/views/admin/index.html.erb:11
-#: ../../../app/views/shared/_header.html.erb:40
+#: ../../../app/views/shared/_header.html.erb:32
 msgid "Administration Center"
 msgstr "行政"
 
-#: ../../../app/views/admin/_navigation.html.erb:17
-msgid "BETA"
-msgstr "测试版"
-
-#: ../../../app/views/admin/_navigation.html.erb:31
+#: ../../../app/views/admin/_navigation.html.erb:26
 msgid "Administration Home"
 msgstr "行政之家"
 
-#: ../../../app/views/admin/_navigation.html.erb:37
+#: ../../../app/views/admin/_navigation.html.erb:32
 #: ../../../app/views/admin/index.html.erb:121
 msgid "System Administration"
 msgstr "系统管理"
 
-#: ../../../app/views/admin/_navigation.html.erb:43
+#: ../../../app/views/admin/_navigation.html.erb:38
 msgid "Admin Users"
 msgstr "管理员用户"
 
-#: ../../../app/views/admin/_navigation.html.erb:50
+#: ../../../app/views/admin/_navigation.html.erb:45
 #: ../../../app/views/admin/index.html.erb:161
 #: ../../../app/views/madmin/dashboard/show.html.erb:1
 msgid "Data Explorer"
 msgstr "数据浏览器"
 
-#: ../../../app/views/admin/_navigation.html.erb:57
+#: ../../../app/views/admin/_navigation.html.erb:52
 #: ../../../app/views/admin/index.html.erb:146
 #: ../../../app/views/layouts/mission_control/jobs/_application_selection.html.erb:34
 msgid "Background Jobs"
 msgstr "背景职位"
 
-#: ../../../app/views/admin/_navigation.html.erb:64
+#: ../../../app/views/admin/_navigation.html.erb:59
 #: ../../../app/views/admin/custom_css/edit.html.erb:1
 #: ../../../app/views/admin/custom_css/edit.html.erb:6
 msgid "Custom CSS"
@@ -597,7 +593,7 @@ msgstr "查看更新日志并下载更新"
 
 #: ../../../app/views/admin/index.html.erb:262
 #: ../../../app/views/pages/about.html.erb:102
-#: ../../../app/views/shared/_footer.html.erb:29
+#: ../../../app/views/shared/_footer.html.erb:19
 #: ../../../app/views/users/first_runs/new.html.erb:190
 msgid "Documentation"
 msgstr "文档"
@@ -1057,7 +1053,7 @@ msgstr "设置双因素身份验证"
 
 #: ../../../app/views/devise/registrations/token.html.erb:1
 #: ../../../app/views/devise/registrations/token.html.erb:6
-#: ../../../app/views/shared/_header.html.erb:54
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "API Token"
 msgstr "API令牌"
 
@@ -1153,14 +1149,22 @@ msgstr "系统活动"
 msgid "Back to App"
 msgstr "返回应用"
 
-#: ../../../app/views/layouts/login.html.erb:34
-#: ../../../app/views/shared/_footer.html.erb:10
-#: ../../../app/views/shared/_footer.html.erb:14
-#: ../../../app/views/shared/_header.html.erb:9
-#: ../../../app/views/shared/_header.html.erb:13
-#: ../../../app/views/users/first_runs/new.html.erb:11
-msgid "Password Pusher Logo"
-msgstr "Password Pusher 图标"
+#: ../../../app/views/layouts/application.html.erb:6
+#: ../../../app/views/layouts/login.html.erb:6
+msgid "Use light theme"
+msgstr "使用浅色主题"
+
+#: ../../../app/views/layouts/application.html.erb:7
+#: ../../../app/views/layouts/login.html.erb:7
+msgid "Use dark theme"
+msgstr "使用深色主题"
+
+#: ../../../app/views/layouts/application.html.erb:8
+#: ../../../app/views/layouts/login.html.erb:8
+#: ../../../app/views/shared/_theme_toggle.html.erb:9
+#: ../../../app/views/shared/_theme_toggle.html.erb:10
+msgid "Use system theme"
+msgstr "使用系统主题"
 
 #: ../../../app/views/layouts/madmin/application.html.erb:13
 msgid "Data Explorer - Administration - Password Pusher"
@@ -2423,6 +2427,12 @@ msgstr "此链接有效期为%{remaining}，或直到%{views}次查看，以先�
 msgid "Upon expiration, this secret link and all content are permanently deleted."
 msgstr "过期后，此秘密链接和所有内容将被永久删除。"
 
+#: ../../../app/views/pushes/_error.html.erb:3
+msgid "%{count} error prohibited this push from being saved:"
+msgid_plural "%{count} errors prohibited this push from being saved:"
+msgstr[0] "%{count} 错误导致此推送无法保存："
+msgstr[1] ""
+
 #: ../../../app/views/pushes/_files_form.html.erb:1
 msgid "Securely Send Files"
 msgstr "安全地发送文件"
@@ -2928,7 +2938,7 @@ msgstr "编辑推送"
 
 #: ../../../app/views/pushes/index.html.erb:1
 #: ../../../app/views/shared/_dashboard_header.html.erb:5
-#: ../../../app/views/shared/_header.html.erb:27
+#: ../../../app/views/shared/_header.html.erb:19
 msgid "Dashboard"
 msgstr "仪表盘"
 
@@ -3219,6 +3229,11 @@ msgstr "其他选项"
 msgid "Show / Hide"
 msgstr "显示 / 隐藏"
 
+#: ../../../app/views/shared/_brand_logo.html.erb:22
+#: ../../../app/views/users/first_runs/new.html.erb:11
+msgid "Password Pusher Logo"
+msgstr "Password Pusher 图标"
+
 #: ../../../app/views/shared/_cookie_consent.html.erb:6
 msgid ""
 "Browser cookies help make this tool work. By using it, you agree the use of th"
@@ -3240,31 +3255,31 @@ msgid ""
 "o proceed?"
 msgstr "⚠️警告：删除%{email}也会永久删除该用户创建的所有%{count}推送。此操作无法撤销。您确定要继续吗？"
 
-#: ../../../app/views/shared/_footer.html.erb:27
+#: ../../../app/views/shared/_footer.html.erb:17
 msgid "About"
 msgstr "关于"
 
-#: ../../../app/views/shared/_footer.html.erb:28
+#: ../../../app/views/shared/_footer.html.erb:18
 msgid "API"
 msgstr "API"
 
-#: ../../../app/views/shared/_header.html.erb:33
+#: ../../../app/views/shared/_header.html.erb:25
 msgid "Account"
 msgstr "账户"
 
-#: ../../../app/views/shared/_header.html.erb:48
+#: ../../../app/views/shared/_header.html.erb:40
 msgid "Edit Login Details"
 msgstr "编辑登录信息"
 
-#: ../../../app/views/shared/_header.html.erb:61
+#: ../../../app/views/shared/_header.html.erb:53
 msgid "Log Out"
 msgstr "登出"
 
-#: ../../../app/views/shared/_header.html.erb:68
+#: ../../../app/views/shared/_header.html.erb:60
 msgid "Log In"
 msgstr "登录"
 
-#: ../../../app/views/shared/_header.html.erb:71
+#: ../../../app/views/shared/_header.html.erb:63
 msgid "Sign Up"
 msgstr "注册账号"
 

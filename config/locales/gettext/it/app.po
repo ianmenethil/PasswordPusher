@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2026-07-19 14:16+0200\n"
-"PO-Revision-Date: 2026-07-19 12:16+0000\n"
+"POT-Creation-Date: 2026-08-13 23:55+0000\n"
+"PO-Revision-Date: 2026-08-13 23:55+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -149,19 +149,19 @@ msgid "File pushes are unavailable while logins are disabled."
 msgstr "Il caricamento dei file non è disponibile finché l'accesso è disabilitato."
 
 #: ../../../app/controllers/pushes_controller.rb:536
-#: ../../../app/models/push.rb:210
+#: ../../../app/models/push.rb:223
 msgid "File pushes are disabled."
 msgstr "I push dei file sono disabilitati."
 
 #: ../../../app/controllers/pushes_controller.rb:541
-#: ../../../app/models/push.rb:214
+#: ../../../app/models/push.rb:227
 #: ../../../test/controllers/urls_controller_test.rb:110
 #: ../../../test/controllers/urls_controller_test.rb:127
 msgid "URL pushes are disabled."
 msgstr "Gli URL push sono disabilitati."
 
 #: ../../../app/controllers/pushes_controller.rb:553
-#: ../../../app/models/push.rb:218
+#: ../../../app/models/push.rb:231
 #: ../../../test/controllers/qr_push_controller_test.rb:128
 #: ../../../test/controllers/qr_push_controller_test.rb:144
 msgid "QR code pushes are disabled."
@@ -218,10 +218,8 @@ msgstr[0] "giorno"
 msgstr[1] "giorni"
 
 #: ../../../app/helpers/share_message_helper.rb:14
-msgid "Once retrieved, the link and content will be deleted upon expiration."
-msgstr ""
-"Una volta recuperato, il link e il contenuto verranno eliminati al momento del"
-"la scadenza."
+msgid "The link and content will be deleted upon expiration."
+msgstr "Il link e il contenuto saranno cancellati alla scadenza."
 
 #: ../../../app/helpers/share_message_helper.rb:18
 msgid "A secure link has been shared with you."
@@ -356,11 +354,11 @@ msgstr ""
 "Il payload del codice QR è troppo grande. Puoi caricare solo fino a %{count} b"
 "yte."
 
-#: ../../../app/models/push.rb:243
+#: ../../../app/models/push.rb:256
 msgid "are not available for expired pushes"
 msgstr "non sono disponibili per le notifiche push scadute"
 
-#: ../../../app/models/push.rb:244
+#: ../../../app/models/push.rb:257
 msgid "is not available for expired pushes"
 msgstr "non è disponibile per le notifiche push scadute"
 
@@ -386,40 +384,36 @@ msgstr "Spingipassword"
 
 #: ../../../app/views/admin/_navigation.html.erb:12
 #: ../../../app/views/admin/index.html.erb:11
-#: ../../../app/views/shared/_header.html.erb:40
+#: ../../../app/views/shared/_header.html.erb:32
 msgid "Administration Center"
 msgstr "Amministrazione"
 
-#: ../../../app/views/admin/_navigation.html.erb:17
-msgid "BETA"
-msgstr "BETA"
-
-#: ../../../app/views/admin/_navigation.html.erb:31
+#: ../../../app/views/admin/_navigation.html.erb:26
 msgid "Administration Home"
 msgstr "Amministrazione Home"
 
-#: ../../../app/views/admin/_navigation.html.erb:37
+#: ../../../app/views/admin/_navigation.html.erb:32
 #: ../../../app/views/admin/index.html.erb:121
 msgid "System Administration"
 msgstr "Amministrazione di sistema"
 
-#: ../../../app/views/admin/_navigation.html.erb:43
+#: ../../../app/views/admin/_navigation.html.erb:38
 msgid "Admin Users"
 msgstr "Utenti amministratori"
 
-#: ../../../app/views/admin/_navigation.html.erb:50
+#: ../../../app/views/admin/_navigation.html.erb:45
 #: ../../../app/views/admin/index.html.erb:161
 #: ../../../app/views/madmin/dashboard/show.html.erb:1
 msgid "Data Explorer"
 msgstr "Esploratore di dati"
 
-#: ../../../app/views/admin/_navigation.html.erb:57
+#: ../../../app/views/admin/_navigation.html.erb:52
 #: ../../../app/views/admin/index.html.erb:146
 #: ../../../app/views/layouts/mission_control/jobs/_application_selection.html.erb:34
 msgid "Background Jobs"
 msgstr "Lavori di sfondo"
 
-#: ../../../app/views/admin/_navigation.html.erb:64
+#: ../../../app/views/admin/_navigation.html.erb:59
 #: ../../../app/views/admin/custom_css/edit.html.erb:1
 #: ../../../app/views/admin/custom_css/edit.html.erb:6
 msgid "Custom CSS"
@@ -639,7 +633,7 @@ msgstr "Visualizza il registro delle modifiche e scarica gli aggiornamenti"
 
 #: ../../../app/views/admin/index.html.erb:262
 #: ../../../app/views/pages/about.html.erb:102
-#: ../../../app/views/shared/_footer.html.erb:29
+#: ../../../app/views/shared/_footer.html.erb:19
 #: ../../../app/views/users/first_runs/new.html.erb:190
 msgid "Documentation"
 msgstr "Documentazione"
@@ -1130,7 +1124,7 @@ msgstr "Configura l'autenticazione a due fattori"
 
 #: ../../../app/views/devise/registrations/token.html.erb:1
 #: ../../../app/views/devise/registrations/token.html.erb:6
-#: ../../../app/views/shared/_header.html.erb:54
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "API Token"
 msgstr "Token API"
 
@@ -1232,14 +1226,22 @@ msgstr "Sistema attivo"
 msgid "Back to App"
 msgstr "Torna all'app"
 
-#: ../../../app/views/layouts/login.html.erb:34
-#: ../../../app/views/shared/_footer.html.erb:10
-#: ../../../app/views/shared/_footer.html.erb:14
-#: ../../../app/views/shared/_header.html.erb:9
-#: ../../../app/views/shared/_header.html.erb:13
-#: ../../../app/views/users/first_runs/new.html.erb:11
-msgid "Password Pusher Logo"
-msgstr "Logo di Password Pusher"
+#: ../../../app/views/layouts/application.html.erb:6
+#: ../../../app/views/layouts/login.html.erb:6
+msgid "Use light theme"
+msgstr "Utilizza il tema chiaro"
+
+#: ../../../app/views/layouts/application.html.erb:7
+#: ../../../app/views/layouts/login.html.erb:7
+msgid "Use dark theme"
+msgstr "Utilizza il tema scuro"
+
+#: ../../../app/views/layouts/application.html.erb:8
+#: ../../../app/views/layouts/login.html.erb:8
+#: ../../../app/views/shared/_theme_toggle.html.erb:9
+#: ../../../app/views/shared/_theme_toggle.html.erb:10
+msgid "Use system theme"
+msgstr "Utilizzare il tema di sistema"
 
 #: ../../../app/views/layouts/madmin/application.html.erb:13
 msgid "Data Explorer - Administration - Password Pusher"
@@ -2631,6 +2633,12 @@ msgstr ""
 "Alla scadenza, questo link segreto e tutti i contenuti vengono eliminati defin"
 "itivamente."
 
+#: ../../../app/views/pushes/_error.html.erb:3
+msgid "%{count} error prohibited this push from being saved:"
+msgid_plural "%{count} errors prohibited this push from being saved:"
+msgstr[0] "%{count} L'errore ha impedito il salvataggio di questa spinta:"
+msgstr[1] "%{count} errori hanno impedito il salvataggio di questo push:"
+
 #: ../../../app/views/pushes/_files_form.html.erb:1
 msgid "Securely Send Files"
 msgstr "Invia file in modo sicuro"
@@ -3160,7 +3168,7 @@ msgstr "Modifica Push"
 
 #: ../../../app/views/pushes/index.html.erb:1
 #: ../../../app/views/shared/_dashboard_header.html.erb:5
-#: ../../../app/views/shared/_header.html.erb:27
+#: ../../../app/views/shared/_header.html.erb:19
 msgid "Dashboard"
 msgstr "Cruscotto"
 
@@ -3459,6 +3467,11 @@ msgstr "Opzioni aggiuntive"
 msgid "Show / Hide"
 msgstr "Mostra / Nascondi"
 
+#: ../../../app/views/shared/_brand_logo.html.erb:22
+#: ../../../app/views/users/first_runs/new.html.erb:11
+msgid "Password Pusher Logo"
+msgstr "Logo di Password Pusher"
+
 #: ../../../app/views/shared/_cookie_consent.html.erb:6
 msgid ""
 "Browser cookies help make this tool work. By using it, you agree the use of th"
@@ -3485,31 +3498,31 @@ msgstr ""
 "I i push %{count} creati da questo utente. Questa azione non può essere annull"
 "ata. Vuoi procedere?"
 
-#: ../../../app/views/shared/_footer.html.erb:27
+#: ../../../app/views/shared/_footer.html.erb:17
 msgid "About"
 msgstr "Chi Siamo"
 
-#: ../../../app/views/shared/_footer.html.erb:28
+#: ../../../app/views/shared/_footer.html.erb:18
 msgid "API"
 msgstr "API"
 
-#: ../../../app/views/shared/_header.html.erb:33
+#: ../../../app/views/shared/_header.html.erb:25
 msgid "Account"
 msgstr "Account"
 
-#: ../../../app/views/shared/_header.html.erb:48
+#: ../../../app/views/shared/_header.html.erb:40
 msgid "Edit Login Details"
 msgstr "Modifica i Dettagli di Accesso"
 
-#: ../../../app/views/shared/_header.html.erb:61
+#: ../../../app/views/shared/_header.html.erb:53
 msgid "Log Out"
 msgstr "Esci"
 
-#: ../../../app/views/shared/_header.html.erb:68
+#: ../../../app/views/shared/_header.html.erb:60
 msgid "Log In"
 msgstr "Accedi"
 
-#: ../../../app/views/shared/_header.html.erb:71
+#: ../../../app/views/shared/_header.html.erb:63
 msgid "Sign Up"
 msgstr "Registrazione"
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2026-07-19 14:16+0200\n"
-"PO-Revision-Date: 2026-07-19 12:16+0000\n"
+"POT-Creation-Date: 2026-08-13 23:55+0000\n"
+"PO-Revision-Date: 2026-08-13 23:55+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -147,19 +147,19 @@ msgid "File pushes are unavailable while logins are disabled."
 msgstr "Odesílání souborů není k dispozici, pokud je přihlášení zakázáno."
 
 #: ../../../app/controllers/pushes_controller.rb:536
-#: ../../../app/models/push.rb:210
+#: ../../../app/models/push.rb:223
 msgid "File pushes are disabled."
 msgstr "Odesílání souborů je zakázáno."
 
 #: ../../../app/controllers/pushes_controller.rb:541
-#: ../../../app/models/push.rb:214
+#: ../../../app/models/push.rb:227
 #: ../../../test/controllers/urls_controller_test.rb:110
 #: ../../../test/controllers/urls_controller_test.rb:127
 msgid "URL pushes are disabled."
 msgstr "Odesílání URL adres je zakázáno."
 
 #: ../../../app/controllers/pushes_controller.rb:553
-#: ../../../app/models/push.rb:218
+#: ../../../app/models/push.rb:231
 #: ../../../test/controllers/qr_push_controller_test.rb:128
 #: ../../../test/controllers/qr_push_controller_test.rb:144
 msgid "QR code pushes are disabled."
@@ -215,8 +215,8 @@ msgstr[1] "dní"
 msgstr[2] "dní"
 
 #: ../../../app/helpers/share_message_helper.rb:14
-msgid "Once retrieved, the link and content will be deleted upon expiration."
-msgstr "Jakmile bude odkaz a obsah získán, budou po vypršení platnosti smazány."
+msgid "The link and content will be deleted upon expiration."
+msgstr "Odkaz a obsah budou po vypršení platnosti smazány."
 
 #: ../../../app/helpers/share_message_helper.rb:18
 msgid "A secure link has been shared with you."
@@ -344,11 +344,11 @@ msgstr "musí být platná HTTP nebo HTTPS URL."
 msgid "The QR code payload is too large.  You can only push up to %{count} bytes."
 msgstr "Obsah QR kódu je příliš velký. Můžete vložit maximálně %{count} bajtů."
 
-#: ../../../app/models/push.rb:243
+#: ../../../app/models/push.rb:256
 msgid "are not available for expired pushes"
 msgstr "nejsou k dispozici pro expirované pushy"
 
-#: ../../../app/models/push.rb:244
+#: ../../../app/models/push.rb:257
 msgid "is not available for expired pushes"
 msgstr "není k dispozici pro expirované pushy"
 
@@ -374,40 +374,36 @@ msgstr "Posunovač hesel"
 
 #: ../../../app/views/admin/_navigation.html.erb:12
 #: ../../../app/views/admin/index.html.erb:11
-#: ../../../app/views/shared/_header.html.erb:40
+#: ../../../app/views/shared/_header.html.erb:32
 msgid "Administration Center"
 msgstr "Správa"
 
-#: ../../../app/views/admin/_navigation.html.erb:17
-msgid "BETA"
-msgstr "BETA"
-
-#: ../../../app/views/admin/_navigation.html.erb:31
+#: ../../../app/views/admin/_navigation.html.erb:26
 msgid "Administration Home"
 msgstr "Administrativní domovská stránka"
 
-#: ../../../app/views/admin/_navigation.html.erb:37
+#: ../../../app/views/admin/_navigation.html.erb:32
 #: ../../../app/views/admin/index.html.erb:121
 msgid "System Administration"
 msgstr "Správa systému"
 
-#: ../../../app/views/admin/_navigation.html.erb:43
+#: ../../../app/views/admin/_navigation.html.erb:38
 msgid "Admin Users"
 msgstr "Administrátoři"
 
-#: ../../../app/views/admin/_navigation.html.erb:50
+#: ../../../app/views/admin/_navigation.html.erb:45
 #: ../../../app/views/admin/index.html.erb:161
 #: ../../../app/views/madmin/dashboard/show.html.erb:1
 msgid "Data Explorer"
 msgstr "Průzkumník dat"
 
-#: ../../../app/views/admin/_navigation.html.erb:57
+#: ../../../app/views/admin/_navigation.html.erb:52
 #: ../../../app/views/admin/index.html.erb:146
 #: ../../../app/views/layouts/mission_control/jobs/_application_selection.html.erb:34
 msgid "Background Jobs"
 msgstr "Úlohy na pozadí"
 
-#: ../../../app/views/admin/_navigation.html.erb:64
+#: ../../../app/views/admin/_navigation.html.erb:59
 #: ../../../app/views/admin/custom_css/edit.html.erb:1
 #: ../../../app/views/admin/custom_css/edit.html.erb:6
 msgid "Custom CSS"
@@ -620,7 +616,7 @@ msgstr "Zobrazit seznam změn a stáhnout aktualizace"
 
 #: ../../../app/views/admin/index.html.erb:262
 #: ../../../app/views/pages/about.html.erb:102
-#: ../../../app/views/shared/_footer.html.erb:29
+#: ../../../app/views/shared/_footer.html.erb:19
 #: ../../../app/views/users/first_runs/new.html.erb:190
 msgid "Documentation"
 msgstr "Dokumentace"
@@ -1105,7 +1101,7 @@ msgstr "Nastavení dvoufaktorového ověřování"
 
 #: ../../../app/views/devise/registrations/token.html.erb:1
 #: ../../../app/views/devise/registrations/token.html.erb:6
-#: ../../../app/views/shared/_header.html.erb:54
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "API Token"
 msgstr "API Token"
 
@@ -1207,14 +1203,22 @@ msgstr "Systém aktivní"
 msgid "Back to App"
 msgstr "Zpět do aplikace"
 
-#: ../../../app/views/layouts/login.html.erb:34
-#: ../../../app/views/shared/_footer.html.erb:10
-#: ../../../app/views/shared/_footer.html.erb:14
-#: ../../../app/views/shared/_header.html.erb:9
-#: ../../../app/views/shared/_header.html.erb:13
-#: ../../../app/views/users/first_runs/new.html.erb:11
-msgid "Password Pusher Logo"
-msgstr "Logo pro posunování hesel"
+#: ../../../app/views/layouts/application.html.erb:6
+#: ../../../app/views/layouts/login.html.erb:6
+msgid "Use light theme"
+msgstr "Použít světlý motiv"
+
+#: ../../../app/views/layouts/application.html.erb:7
+#: ../../../app/views/layouts/login.html.erb:7
+msgid "Use dark theme"
+msgstr "Použít tmavý motiv"
+
+#: ../../../app/views/layouts/application.html.erb:8
+#: ../../../app/views/layouts/login.html.erb:8
+#: ../../../app/views/shared/_theme_toggle.html.erb:9
+#: ../../../app/views/shared/_theme_toggle.html.erb:10
+msgid "Use system theme"
+msgstr "Použít systémový motiv"
 
 #: ../../../app/views/layouts/madmin/application.html.erb:13
 msgid "Data Explorer - Administration - Password Pusher"
@@ -2585,6 +2589,13 @@ msgstr ""
 msgid "Upon expiration, this secret link and all content are permanently deleted."
 msgstr "Po vypršení platnosti se tento tajný odkaz a veškerý obsah trvale odstraní."
 
+#: ../../../app/views/pushes/_error.html.erb:3
+msgid "%{count} error prohibited this push from being saved:"
+msgid_plural "%{count} errors prohibited this push from being saved:"
+msgstr[0] "Chyba %{count} zabránila uložení této odeslané zprávy:"
+msgstr[1] "Chyby %{count} zabránily uložení této odeslané zprávy:"
+msgstr[2] "Chyby %{count} zabránily uložení této odeslané zprávy:"
+
 #: ../../../app/views/pushes/_files_form.html.erb:1
 msgid "Securely Send Files"
 msgstr "Bezpečně odesílat soubory"
@@ -3116,7 +3127,7 @@ msgstr "Úprava Push"
 
 #: ../../../app/views/pushes/index.html.erb:1
 #: ../../../app/views/shared/_dashboard_header.html.erb:5
-#: ../../../app/views/shared/_header.html.erb:27
+#: ../../../app/views/shared/_header.html.erb:19
 msgid "Dashboard"
 msgstr "Přehled"
 
@@ -3416,6 +3427,11 @@ msgstr "Další možnosti"
 msgid "Show / Hide"
 msgstr "Zobrazit / Skrýt"
 
+#: ../../../app/views/shared/_brand_logo.html.erb:22
+#: ../../../app/views/users/first_runs/new.html.erb:11
+msgid "Password Pusher Logo"
+msgstr "Logo pro posunování hesel"
+
 #: ../../../app/views/shared/_cookie_consent.html.erb:6
 msgid ""
 "Browser cookies help make this tool work. By using it, you agree the use of th"
@@ -3442,31 +3458,31 @@ msgstr ""
 "tímto uživatelem. Tuto akci nelze vrátit zpět. Jste si jisti, že chcete pokrač"
 "ovat?"
 
-#: ../../../app/views/shared/_footer.html.erb:27
+#: ../../../app/views/shared/_footer.html.erb:17
 msgid "About"
 msgstr "O aplikaci"
 
-#: ../../../app/views/shared/_footer.html.erb:28
+#: ../../../app/views/shared/_footer.html.erb:18
 msgid "API"
 msgstr "API"
 
-#: ../../../app/views/shared/_header.html.erb:33
+#: ../../../app/views/shared/_header.html.erb:25
 msgid "Account"
 msgstr "Účet"
 
-#: ../../../app/views/shared/_header.html.erb:48
+#: ../../../app/views/shared/_header.html.erb:40
 msgid "Edit Login Details"
 msgstr "Upravit přihlašovací údaje"
 
-#: ../../../app/views/shared/_header.html.erb:61
+#: ../../../app/views/shared/_header.html.erb:53
 msgid "Log Out"
 msgstr "Odhlásit se"
 
-#: ../../../app/views/shared/_header.html.erb:68
+#: ../../../app/views/shared/_header.html.erb:60
 msgid "Log In"
 msgstr "Přihlásit se"
 
-#: ../../../app/views/shared/_header.html.erb:71
+#: ../../../app/views/shared/_header.html.erb:63
 msgid "Sign Up"
 msgstr "Přihlásit se"
 

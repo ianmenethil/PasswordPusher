@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2026-07-19 14:16+0200\n"
-"PO-Revision-Date: 2026-07-19 12:16+0000\n"
+"POT-Creation-Date: 2026-08-13 23:55+0000\n"
+"PO-Revision-Date: 2026-08-13 23:55+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Finnish\n"
 "Language: fi\n"
@@ -149,19 +149,19 @@ msgstr ""
 "tettu käytöstä."
 
 #: ../../../app/controllers/pushes_controller.rb:536
-#: ../../../app/models/push.rb:210
+#: ../../../app/models/push.rb:223
 msgid "File pushes are disabled."
 msgstr "Tiedostojen push-toiminnot ovat poissa käytöstä."
 
 #: ../../../app/controllers/pushes_controller.rb:541
-#: ../../../app/models/push.rb:214
+#: ../../../app/models/push.rb:227
 #: ../../../test/controllers/urls_controller_test.rb:110
 #: ../../../test/controllers/urls_controller_test.rb:127
 msgid "URL pushes are disabled."
 msgstr "URL-sivujen lähettäminen on poistettu käytöstä."
 
 #: ../../../app/controllers/pushes_controller.rb:553
-#: ../../../app/models/push.rb:218
+#: ../../../app/models/push.rb:231
 #: ../../../test/controllers/qr_push_controller_test.rb:128
 #: ../../../test/controllers/qr_push_controller_test.rb:144
 msgid "QR code pushes are disabled."
@@ -218,8 +218,8 @@ msgstr[0] "päivä"
 msgstr[1] "päivää"
 
 #: ../../../app/helpers/share_message_helper.rb:14
-msgid "Once retrieved, the link and content will be deleted upon expiration."
-msgstr "Kun linkki ja sisältö on noudettu, ne poistetaan vanhentumisen yhteydessä."
+msgid "The link and content will be deleted upon expiration."
+msgstr "Linkki ja sisältö poistetaan sen voimassaolon päättyessä."
 
 #: ../../../app/helpers/share_message_helper.rb:18
 msgid "A secure link has been shared with you."
@@ -348,11 +348,11 @@ msgstr "täytyy olla voimassa oleva HTTP- tai HTTPS-URL."
 msgid "The QR code payload is too large.  You can only push up to %{count} bytes."
 msgstr "QR-koodin hyötykuorma on liian suuri. Voit työntää enintään %{count} tavua."
 
-#: ../../../app/models/push.rb:243
+#: ../../../app/models/push.rb:256
 msgid "are not available for expired pushes"
 msgstr "eivät ole saatavilla vanhentuneille push-tiedostoille"
 
-#: ../../../app/models/push.rb:244
+#: ../../../app/models/push.rb:257
 msgid "is not available for expired pushes"
 msgstr "ei ole saatavilla vanhentuneille push-tiedostoille"
 
@@ -378,40 +378,36 @@ msgstr "Salasanan työntäjä"
 
 #: ../../../app/views/admin/_navigation.html.erb:12
 #: ../../../app/views/admin/index.html.erb:11
-#: ../../../app/views/shared/_header.html.erb:40
+#: ../../../app/views/shared/_header.html.erb:32
 msgid "Administration Center"
 msgstr "Hallinto"
 
-#: ../../../app/views/admin/_navigation.html.erb:17
-msgid "BETA"
-msgstr "BEETA"
-
-#: ../../../app/views/admin/_navigation.html.erb:31
+#: ../../../app/views/admin/_navigation.html.erb:26
 msgid "Administration Home"
 msgstr "Hallinnon kotisivu"
 
-#: ../../../app/views/admin/_navigation.html.erb:37
+#: ../../../app/views/admin/_navigation.html.erb:32
 #: ../../../app/views/admin/index.html.erb:121
 msgid "System Administration"
 msgstr "Järjestelmänvalvoja"
 
-#: ../../../app/views/admin/_navigation.html.erb:43
+#: ../../../app/views/admin/_navigation.html.erb:38
 msgid "Admin Users"
 msgstr "Järjestelmänvalvojat"
 
-#: ../../../app/views/admin/_navigation.html.erb:50
+#: ../../../app/views/admin/_navigation.html.erb:45
 #: ../../../app/views/admin/index.html.erb:161
 #: ../../../app/views/madmin/dashboard/show.html.erb:1
 msgid "Data Explorer"
 msgstr "Tietojen selain"
 
-#: ../../../app/views/admin/_navigation.html.erb:57
+#: ../../../app/views/admin/_navigation.html.erb:52
 #: ../../../app/views/admin/index.html.erb:146
 #: ../../../app/views/layouts/mission_control/jobs/_application_selection.html.erb:34
 msgid "Background Jobs"
 msgstr "Taustatyöt"
 
-#: ../../../app/views/admin/_navigation.html.erb:64
+#: ../../../app/views/admin/_navigation.html.erb:59
 #: ../../../app/views/admin/custom_css/edit.html.erb:1
 #: ../../../app/views/admin/custom_css/edit.html.erb:6
 msgid "Custom CSS"
@@ -622,7 +618,7 @@ msgstr "Näytä muutosloki ja lataa päivitykset"
 
 #: ../../../app/views/admin/index.html.erb:262
 #: ../../../app/views/pages/about.html.erb:102
-#: ../../../app/views/shared/_footer.html.erb:29
+#: ../../../app/views/shared/_footer.html.erb:19
 #: ../../../app/views/users/first_runs/new.html.erb:190
 msgid "Documentation"
 msgstr "Dokumentointi"
@@ -1103,7 +1099,7 @@ msgstr "Ota käyttöön kaksivaiheinen todennus"
 
 #: ../../../app/views/devise/registrations/token.html.erb:1
 #: ../../../app/views/devise/registrations/token.html.erb:6
-#: ../../../app/views/shared/_header.html.erb:54
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "API Token"
 msgstr "API-avain"
 
@@ -1205,14 +1201,22 @@ msgstr "Järjestelmä aktiivinen"
 msgid "Back to App"
 msgstr "Takaisin sovellukseen"
 
-#: ../../../app/views/layouts/login.html.erb:34
-#: ../../../app/views/shared/_footer.html.erb:10
-#: ../../../app/views/shared/_footer.html.erb:14
-#: ../../../app/views/shared/_header.html.erb:9
-#: ../../../app/views/shared/_header.html.erb:13
-#: ../../../app/views/users/first_runs/new.html.erb:11
-msgid "Password Pusher Logo"
-msgstr "Password Pusher logo"
+#: ../../../app/views/layouts/application.html.erb:6
+#: ../../../app/views/layouts/login.html.erb:6
+msgid "Use light theme"
+msgstr "Käytä vaaleaa teemaa"
+
+#: ../../../app/views/layouts/application.html.erb:7
+#: ../../../app/views/layouts/login.html.erb:7
+msgid "Use dark theme"
+msgstr "Käytä tummaa teemaa"
+
+#: ../../../app/views/layouts/application.html.erb:8
+#: ../../../app/views/layouts/login.html.erb:8
+#: ../../../app/views/shared/_theme_toggle.html.erb:9
+#: ../../../app/views/shared/_theme_toggle.html.erb:10
+msgid "Use system theme"
+msgstr "Käytä järjestelmäteemaa"
 
 #: ../../../app/views/layouts/madmin/application.html.erb:13
 msgid "Data Explorer - Administration - Password Pusher"
@@ -2595,6 +2599,12 @@ msgstr ""
 "Tämän salaisen linkin ja kaiken sisällön voimassaolon päättyessä se poistetaan"
 " pysyvästi."
 
+#: ../../../app/views/pushes/_error.html.erb:3
+msgid "%{count} error prohibited this push from being saved:"
+msgid_plural "%{count} errors prohibited this push from being saved:"
+msgstr[0] "%{count} -virhe esti tämän pushin tallentamisen:"
+msgstr[1] "%{count} virheet estivät tämän pushin tallentamisen:"
+
 #: ../../../app/views/pushes/_files_form.html.erb:1
 msgid "Securely Send Files"
 msgstr "Lähetä tiedostoja turvallisesti"
@@ -2831,7 +2841,7 @@ msgstr ""
 
 #: ../../../app/views/pushes/_form.html.erb:44
 msgid "Enter the Password or Text to push..."
-msgstr "Anna salasana tai teksti työnnettäväksi..."
+msgstr "Anna salasana tai teksti lähetettäväksi..."
 
 #: ../../../app/views/pushes/_form.html.erb:59
 #: ../../../app/views/pushes/_qr_form.html.erb:49
@@ -2889,8 +2899,8 @@ msgid ""
 "Please obtain and securely store this content in a secure manner, such as in a"
 " password manager."
 msgstr ""
-"Hanki ja tallenna tämä sisältö turvallisesti suojatulla tavalla, kuten salasan"
-"anhallinnassa."
+"Hae ja tallenna tämä sisältö turvallisesti suojatulla tavalla, kuten salasanan"
+"hallinnassa."
 
 #: ../../../app/views/pushes/_show_payload.html.erb:4
 msgid "Your password is blurred out.  Click below to reveal it."
@@ -3125,7 +3135,7 @@ msgstr "Pushin muokkaus"
 
 #: ../../../app/views/pushes/index.html.erb:1
 #: ../../../app/views/shared/_dashboard_header.html.erb:5
-#: ../../../app/views/shared/_header.html.erb:27
+#: ../../../app/views/shared/_header.html.erb:19
 msgid "Dashboard"
 msgstr "Lähetykset"
 
@@ -3280,7 +3290,7 @@ msgstr "yhden klikin esihakuvaihe"
 
 #: ../../../app/views/pushes/preview.html.erb:103
 msgid "View This Push"
-msgstr "Näytä tämä painos"
+msgstr "Näytä tämä lähetys"
 
 #: ../../../app/views/pushes/preview.html.erb:107
 #: ../../../app/views/pushes/preview.html.erb:111
@@ -3428,6 +3438,11 @@ msgstr "Lisäasetukset"
 msgid "Show / Hide"
 msgstr "Näytä / Piilota"
 
+#: ../../../app/views/shared/_brand_logo.html.erb:22
+#: ../../../app/views/users/first_runs/new.html.erb:11
+msgid "Password Pusher Logo"
+msgstr "Password Pusher logo"
+
 #: ../../../app/views/shared/_cookie_consent.html.erb:6
 msgid ""
 "Browser cookies help make this tool work. By using it, you agree the use of th"
@@ -3454,31 +3469,31 @@ msgstr ""
 "än käyttäjän luomat %{count} push-tunnisteet. Tätä toimintoa ei voi perua. Hal"
 "uatko varmasti jatkaa?"
 
-#: ../../../app/views/shared/_footer.html.erb:27
+#: ../../../app/views/shared/_footer.html.erb:17
 msgid "About"
 msgstr "Tietoja"
 
-#: ../../../app/views/shared/_footer.html.erb:28
+#: ../../../app/views/shared/_footer.html.erb:18
 msgid "API"
 msgstr "API"
 
-#: ../../../app/views/shared/_header.html.erb:33
+#: ../../../app/views/shared/_header.html.erb:25
 msgid "Account"
 msgstr "Tili"
 
-#: ../../../app/views/shared/_header.html.erb:48
+#: ../../../app/views/shared/_header.html.erb:40
 msgid "Edit Login Details"
 msgstr "Muokkaa tilitietoja"
 
-#: ../../../app/views/shared/_header.html.erb:61
+#: ../../../app/views/shared/_header.html.erb:53
 msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
-#: ../../../app/views/shared/_header.html.erb:68
+#: ../../../app/views/shared/_header.html.erb:60
 msgid "Log In"
 msgstr "Kirjaudu sisään"
 
-#: ../../../app/views/shared/_header.html.erb:71
+#: ../../../app/views/shared/_header.html.erb:63
 msgid "Sign Up"
 msgstr "Rekisteröidy"
 

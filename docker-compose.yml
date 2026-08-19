@@ -35,6 +35,11 @@ x-env: &x-env
     # Generate a new key here: https://us.pwpush.com/generate_key
     # PWPUSH_MASTER_KEY: ""
     #
+    # Docker secrets (_FILE): instead of the env vars above, you can set:
+    #   PWPUSH_MASTER_KEY_FILE, PWPUSH_MASTER_KEY_PREVIOUS_FILE, SECRET_KEY_BASE_FILE
+    # to a path whose contents are the secret (e.g. /run/secrets/...). The env var wins if both are set.
+    # See: https://docs.pwpush.com/docs/application-encryption/
+    #
     # TLS_DOMAIN: For automatic TLS/SSL (e.g. HTTPS via Let's Encrypt), create a DNS record that
     #   points to this host, then set this env var to that domain (e.g. pwpush.example.com).
     #   The container will provision and renew certificates automatically.
@@ -137,6 +142,7 @@ x-env: &x-env
     # PWP__SHOW_GDPR_CONSENT_BANNER: "false"
     # PWP__NOINDEX: "true" # Default; set false only for public demos
     # PWP__THEME: "default" # See: https://docs.pwpush.com/docs/rebranding/#themes
+    # PWP__THEME_MODE: "auto" # auto | light | dark — lock light/dark or allow visitor toggle
     # PWP_PRECOMPILE: "false"  # DEPRECATED. Precompilation now happens automatically when PWP__THEME is set. Keeping for backward compatibility.
 
     # --- Locale ---

@@ -18,6 +18,34 @@ input[type='file'] {
     justify-content: center;
 }
 
+/* Brand logos follow data-bs-theme (set by theme toggle / instance lock).
+   Use inline-block (not Bootstrap d-block) so text-center layouts can
+   still center the logo, and so !important display utilities cannot
+   force both logos visible at once.
+   Do not set height:auto here — that overrides the HTML height attribute
+   and blows up large custom logo assets in the header. */
+.brand-logo {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0;
+}
+.brand-logo .logo-light {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+}
+.brand-logo .logo-dark {
+  display: none;
+  max-width: 100%;
+  width: auto;
+}
+html[data-bs-theme="dark"] .brand-logo .logo-light {
+  display: none;
+}
+html[data-bs-theme="dark"] .brand-logo .logo-dark {
+  display: inline-block;
+}
+
 .page { margin: 6px; }
 .first { margin: 6px; }
 .prev { margin: 6px; }
@@ -31,4 +59,31 @@ input[type='file'] {
 }
 .payload-reveal-zone .spoiler[data-spoiler-state="revealed"] {
   cursor: text;
+}
+
+/* Hide payload while typing (create form eye toggle) */
+.payload-hidden {
+  -webkit-text-security: disc;
+}
+@supports not (-webkit-text-security: disc) {
+  .payload-hidden {
+    color: transparent;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
+  }
+  html[data-bs-theme="dark"] .payload-hidden {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+  }
+}
+
+.payload-visibility-toggle {
+  color: var(--bs-body-color);
+  line-height: 1;
+  text-decoration: none;
+}
+.payload-visibility-toggle:hover,
+.payload-visibility-toggle:focus {
+  color: var(--bs-emphasis-color);
+}
+.payload-visibility-toggle .bi {
+  font-size: 1.35rem;
 }
