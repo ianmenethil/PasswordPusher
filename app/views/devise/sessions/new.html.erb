@@ -1,5 +1,4 @@
 <% title(I18n.t('devise.general.login')) %>
-<h2 class='my-3'><%= I18n.t('devise.general.login') %></h1>
 
 <% unless Settings.zenith_sso_only %>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>

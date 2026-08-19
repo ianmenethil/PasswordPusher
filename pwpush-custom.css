@@ -1,0 +1,95 @@
+/* Zenith Payments — Password Pusher custom CSS
+   Paste this whole block into /admin/custom_css/edit → Custom Stylesheet, then Save.
+   Tokens sourced from the Zenith Payments 2025 brand guidelines. */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --zp-red: #D71F26;
+  --zp-red-hover: #B91B21;
+  --zp-red-press: #A0171C;
+  --zp-ink: #1C1C1C;
+  --zp-n-200: #E7E7E7;
+  --zp-n-300: #D1D1D1;
+}
+
+[data-bs-theme="dark"] {
+  --zp-red: #E83239;
+  --zp-red-hover: #F04148;
+  --zp-red-press: #C81B22;
+  --zp-ink: #F4F4F4;
+  --zp-n-200: #262626;
+  --zp-n-300: #353535;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+/* Password / payload textarea — monospace like the docs' own example, on-brand focus ring */
+#push_payload {
+  min-height: 300px;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 1.05rem;
+  border-radius: 8px;
+}
+#push_payload:focus,
+#push_passphrase:focus {
+  border-color: var(--zp-red);
+  box-shadow: 0 0 0 0.25rem rgba(215, 31, 38, 0.2);
+}
+
+/* Generate password button — ink, not a gradient (brand: red is accent-only) */
+#generate_password {
+  background-color: var(--zp-ink);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Slider */
+.form-range::-webkit-slider-thumb {
+  background-color: var(--zp-red);
+}
+.form-range::-moz-range-thumb {
+  background-color: var(--zp-red);
+}
+.form-range::-webkit-slider-runnable-track {
+  height: 8px;
+}
+
+/* Push It / primary submit — brand red, full pill per shape rules */
+button[type="submit"].btn-lg,
+.btn-primary {
+  background-color: var(--zp-red);
+  border-color: var(--zp-red);
+  border-radius: 9999px;
+  font-weight: 600;
+}
+button[type="submit"].btn-lg:hover,
+.btn-primary:hover {
+  background-color: var(--zp-red-hover);
+  border-color: var(--zp-red-hover);
+}
+button[type="submit"].btn-lg:active,
+.btn-primary:active {
+  background-color: var(--zp-red-press);
+  border-color: var(--zp-red-press);
+}
+
+/* Card-style form sections — 12px radius per brand shape rules */
+.border.rounded-3 {
+  border: 1px solid var(--zp-n-200) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s;
+}
+.border.rounded-3:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}

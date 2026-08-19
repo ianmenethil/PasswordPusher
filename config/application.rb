@@ -52,6 +52,11 @@ module PasswordPusher
 
     config.active_storage.variant_processor = :disabled
 
+    # app/middleware isn't one of Rails' default autoloaded app/* dirs; register it explicitly
+    # (see config/initializers/recurring_job_catchup_middleware.rb for what's registered here).
+    config.autoload_paths << Rails.root.join("app/middleware")
+    config.eager_load_paths << Rails.root.join("app/middleware")
+
     # We already authenticate /admin routes
     ::MissionControl::Jobs.http_basic_auth_enabled = false if defined?(::MissionControl::Jobs)
 

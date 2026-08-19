@@ -26,6 +26,7 @@
   <%= csp_meta_tag if defined?(csp_meta_tag) %>
 
   <%= stylesheet_link_tag PasswordPusher::Theme.stylesheet_logical_name, "data-turbo-track": "reload" %>
+  <%= custom_css_style_tag %>
   <%= javascript_importmap_tags %>
   <%= tag.meta name: 'turbo-drive-enabled', content: ENV.key?('TURBO_DRIVE_ENABLED') ? ENV['TURBO_DRIVE_ENABLED'].to_s.downcase : true %>
 </head>
@@ -43,11 +44,9 @@
 
       <%= yield %>
 
-      <hr class="mt-5">
       <div class='my-3'>
         <%= render "devise/shared/links" %>
       </div>
-      <hr class="mt-5">
     </main>
   </div>
 </body>
